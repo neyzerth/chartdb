@@ -494,11 +494,9 @@ export const ja: LanguageTranslation = {
         share_dialog: {
             title: 'Share Diagram',
             description: 'Share a read-only link or embed this diagram.',
-            tab_share_link: 'Share Link',
-            tab_embed: 'Embed',
             share_link_label: 'Share Link',
             embed_url_label: 'Embed URL',
-
+            embed_toggle: 'Want to embed this view?',
             invalid_link_title: 'Invalid Link',
             invalid_link_description:
                 'The share link is invalid or has expired.',
