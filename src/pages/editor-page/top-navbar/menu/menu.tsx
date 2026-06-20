@@ -46,6 +46,7 @@ export const Menu: React.FC<MenuProps> = () => {
         openExportImageDialog,
         openExportDiagramDialog,
         openImportDiagramDialog,
+        openShareDialog,
     } = useDialog();
     const { showAlert } = useAlert();
     const { setTheme, theme } = useTheme();
@@ -307,6 +308,10 @@ export const Menu: React.FC<MenuProps> = () => {
                             </MenubarItem>
                         </MenubarSubContent>
                     </MenubarSub>
+                    <MenubarSeparator />
+                    <MenubarItem onClick={openShareDialog}>
+                        {t('menu.actions.share')}
+                    </MenubarItem>
                     <MenubarSeparator />
                     <MenubarItem
                         onClick={() =>

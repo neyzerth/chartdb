@@ -20,6 +20,7 @@ import type { ExportImageDialogProps } from '@/dialogs/export-image-dialog/expor
 import { ExportImageDialog } from '@/dialogs/export-image-dialog/export-image-dialog';
 import { ExportDiagramDialog } from '@/dialogs/export-diagram-dialog/export-diagram-dialog';
 import { ImportDiagramDialog } from '@/dialogs/import-diagram-dialog/import-diagram-dialog';
+import { ShareDialog } from '@/dialogs/share-dialog/share-dialog';
 
 export const DialogProvider: React.FC<React.PropsWithChildren> = ({
     children,
@@ -134,6 +135,9 @@ export const DialogProvider: React.FC<React.PropsWithChildren> = ({
     const [openImportDiagramDialog, setOpenImportDiagramDialog] =
         useState(false);
 
+    // Share dialog
+    const [openShareDialog, setOpenShareDialog] = useState(false);
+
     return (
         <dialogContext.Provider
             value={{
@@ -163,6 +167,8 @@ export const DialogProvider: React.FC<React.PropsWithChildren> = ({
                 openImportDiagramDialog: () => setOpenImportDiagramDialog(true),
                 closeImportDiagramDialog: () =>
                     setOpenImportDiagramDialog(false),
+                openShareDialog: () => setOpenShareDialog(true),
+                closeShareDialog: () => setOpenShareDialog(false),
             }}
         >
             {children}
@@ -197,6 +203,7 @@ export const DialogProvider: React.FC<React.PropsWithChildren> = ({
             />
             <ExportDiagramDialog dialog={{ open: openExportDiagramDialog }} />
             <ImportDiagramDialog dialog={{ open: openImportDiagramDialog }} />
+            <ShareDialog dialog={{ open: openShareDialog }} />
         </dialogContext.Provider>
     );
 };
