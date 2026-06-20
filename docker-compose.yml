@@ -1,0 +1,17 @@
+services:
+  chartdb:
+    image: ghcr.io/chartdb/chartdb:latest
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+    environment:
+      # Optional: API key for OpenAI-powered SQL export
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # Optional: custom inference endpoint (e.g. vLLM)
+      # - OPENAI_API_ENDPOINT=${OPENAI_API_ENDPOINT}
+      # Optional: LLM model name for custom endpoint
+      # - LLM_MODEL_NAME=${LLM_MODEL_NAME}
+      # Optional: hide "ChartDB Cloud" branding
+      - HIDE_CHARTDB_CLOUD=true
+      # Optional: disable analytics
+      - DISABLE_ANALYTICS=true
