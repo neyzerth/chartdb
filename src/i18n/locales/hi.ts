@@ -497,9 +497,8 @@ export const hi: LanguageTranslation = {
             tab_share_link: 'Share Link',
             tab_embed: 'Embed',
             share_link_label: 'Share Link',
-            embed_code_label: 'Embed Code',
-            embed_width: 'Width',
-            embed_height: 'Height',
+            embed_url_label: 'Embed URL',
+
             invalid_link_title: 'Invalid Link',
             invalid_link_description:
                 'The share link is invalid or has expired.',
