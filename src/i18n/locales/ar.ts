@@ -20,6 +20,7 @@ export const ar: LanguageTranslation = {
                 import: 'استيراد قاعدة بيانات',
                 export_sql: 'SQL تصدير',
                 export_as: 'تصدير كـ',
+                share: 'Share',
                 delete_diagram: 'حذف',
             },
             edit: {
@@ -475,6 +476,20 @@ export const ar: LanguageTranslation = {
                 description:
                     'support@chartdb.io حدث خطأ ما. هل تحتاج إلى مساعدة؟',
             },
+        },
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            share_link_label: 'Share Link',
+            embed_url_label: 'Embed URL',
+            embed_toggle: 'Want to embed this view?',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
         },
         import_diagram_dialog: {
             title: 'استيراد الرسم البياني',

@@ -20,6 +20,7 @@ export const ja: LanguageTranslation = {
                 import: 'データベースをインポート',
                 export_sql: 'SQLをエクスポート',
                 export_as: '形式を指定してエクスポート',
+                share: 'Share',
                 delete_diagram: '削除',
             },
             edit: {
@@ -489,6 +490,20 @@ export const ja: LanguageTranslation = {
             },
         },
         // TODO: Translate
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            share_link_label: 'Share Link',
+            embed_url_label: 'Embed URL',
+            embed_toggle: 'Want to embed this view?',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
+        },
         import_diagram_dialog: {
             title: 'Import Diagram',
             description: 'Paste the diagram JSON below:',

@@ -66,6 +66,10 @@ export interface DialogContext {
         params: Omit<ImportDiagramDialogProps, 'dialog'>
     ) => void;
     closeImportDiagramDialog: () => void;
+
+    // Share dialog
+    openShareDialog: () => void;
+    closeShareDialog: () => void;
 }
 
 export const dialogContext = createContext<DialogContext>({
@@ -89,4 +93,6 @@ export const dialogContext = createContext<DialogContext>({
     closeExportDiagramDialog: emptyFn,
     openImportDiagramDialog: emptyFn,
     closeImportDiagramDialog: emptyFn,
+    openShareDialog: emptyFn,
+    closeShareDialog: emptyFn,
 });

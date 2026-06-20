@@ -20,6 +20,7 @@ export const zh_CN: LanguageTranslation = {
                 import: '导入数据库',
                 export_sql: '导出 SQL 语句',
                 export_as: '导出为',
+                share: 'Share',
                 delete_diagram: '删除',
             },
             edit: {
@@ -473,6 +474,20 @@ export const zh_CN: LanguageTranslation = {
                 description:
                     'Something went wrong. Need help? support@chartdb.io',
             },
+        },
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            share_link_label: 'Share Link',
+            embed_url_label: 'Embed URL',
+            embed_toggle: 'Want to embed this view?',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
         },
 
         import_diagram_dialog: {

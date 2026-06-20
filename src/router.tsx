@@ -130,6 +130,24 @@ const routes: RouteObject[] = [
         },
     },
     {
+        path: 'share',
+        async lazy() {
+            const { SharePage } = await import('./pages/share-page/share-page');
+            return {
+                element: <SharePage />,
+            };
+        },
+    },
+    {
+        path: 'embed',
+        async lazy() {
+            const { EmbedPage } = await import('./pages/embed-page/embed-page');
+            return {
+                element: <EmbedPage />,
+            };
+        },
+    },
+    {
         path: '*',
         async lazy() {
             const { NotFoundPage } =
