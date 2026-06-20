@@ -20,6 +20,7 @@ export const fr: LanguageTranslation = {
                 import: 'Importer Base de Données',
                 export_sql: 'Exporter SQL',
                 export_as: 'Exporter en tant que',
+                share: 'Share',
                 delete_diagram: 'Supprimer',
             },
             edit: {
@@ -481,6 +482,23 @@ export const fr: LanguageTranslation = {
                 description:
                     "Une erreur s'est produite. Besoin d'aide ? support@chartdb.io",
             },
+        },
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            tab_share_link: 'Share Link',
+            tab_embed: 'Embed',
+            share_link_label: 'Share Link',
+            embed_code_label: 'Embed Code',
+            embed_width: 'Width',
+            embed_height: 'Height',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
         },
         import_diagram_dialog: {
             title: 'Importer un diagramme',

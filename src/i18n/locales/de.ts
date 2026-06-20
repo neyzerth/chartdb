@@ -20,6 +20,7 @@ export const de: LanguageTranslation = {
                 import: 'Datenbank importieren',
                 export_sql: 'SQL exportieren',
                 export_as: 'Exportieren als',
+                share: 'Share',
                 delete_diagram: 'Löschen',
             },
             edit: {
@@ -488,6 +489,23 @@ export const de: LanguageTranslation = {
             },
         },
         // TODO: Translate
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            tab_share_link: 'Share Link',
+            tab_embed: 'Embed',
+            share_link_label: 'Share Link',
+            embed_code_label: 'Embed Code',
+            embed_width: 'Width',
+            embed_height: 'Height',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
+        },
         import_diagram_dialog: {
             title: 'Import Diagram',
             description: 'Paste the diagram JSON below:',

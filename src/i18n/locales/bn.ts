@@ -20,6 +20,7 @@ export const bn: LanguageTranslation = {
                 import: 'ডাটাবেস আমদানি করুন',
                 export_sql: 'SQL রপ্তানি করুন',
                 export_as: 'রূপে রপ্তানি করুন',
+                share: 'Share',
                 delete_diagram: 'মুছুন',
             },
             edit: {
@@ -485,6 +486,23 @@ export const bn: LanguageTranslation = {
                 description:
                     'কিছু ভুল হয়েছে। সাহায্যের প্রয়োজন? support@chartdb.io-এ যোগাযোগ করুন।',
             },
+        },
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            tab_share_link: 'Share Link',
+            tab_embed: 'Embed',
+            share_link_label: 'Share Link',
+            embed_code_label: 'Embed Code',
+            embed_width: 'Width',
+            embed_height: 'Height',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
         },
 
         import_diagram_dialog: {

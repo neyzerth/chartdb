@@ -20,6 +20,7 @@ export const ko_KR: LanguageTranslation = {
                 import: '데이터베이스 가져오기',
                 export_sql: 'SQL로 저장',
                 export_as: '다른 형식으로 저장',
+                share: 'Share',
                 delete_diagram: '삭제',
             },
             edit: {
@@ -481,6 +482,23 @@ export const ko_KR: LanguageTranslation = {
                 description:
                     '무언가 문제가 발생하였습니다. 도움이 필요하신 경우 support@chartdb.io으로 연락해주세요.',
             },
+        },
+
+        share_dialog: {
+            title: 'Share Diagram',
+            description: 'Share a read-only link or embed this diagram.',
+            tab_share_link: 'Share Link',
+            tab_embed: 'Embed',
+            share_link_label: 'Share Link',
+            embed_code_label: 'Embed Code',
+            embed_width: 'Width',
+            embed_height: 'Height',
+            invalid_link_title: 'Invalid Link',
+            invalid_link_description:
+                'The share link is invalid or has expired.',
+            clone_to_edit: 'Clone to Edit',
+            clone_success: 'Diagram cloned successfully',
+            go_to_editor: 'Go to Editor',
         },
         import_diagram_dialog: {
             title: '다이어그램 가져오기',
