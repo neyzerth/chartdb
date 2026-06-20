@@ -1,6 +1,15 @@
 services:
   chartdb:
-    image: ghcr.io/chartdb/chartdb:latest
+    image: ghcr.io/neyzerth/chartdb:latest
+    build:
+      context: .
+      args:
+        # Build arguments (optional, passed via --build-arg or .env file)
+        # - VITE_OPENAI_API_KEY
+        # - VITE_OPENAI_API_ENDPOINT
+        # - VITE_LLM_MODEL_NAME
+        - VITE_HIDE_CHARTDB_CLOUD=${VITE_HIDE_CHARTDB_CLOUD:-true}
+        - VITE_DISABLE_ANALYTICS=${VITE_DISABLE_ANALYTICS:-true}
     ports:
       - "8082:80"
     restart: unless-stopped
