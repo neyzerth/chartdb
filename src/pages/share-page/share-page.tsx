@@ -26,6 +26,10 @@ import {
 import { HOST_URL } from '@/lib/env';
 import { Copy } from 'lucide-react';
 
+const openInNewTab = (url: string): void => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 const SharePageComponent: React.FC = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -68,11 +72,12 @@ const SharePageComponent: React.FC = () => {
             const cloned = cloneDiagramFromShareHash(data);
             await deleteDiagram(cloned.id);
             await addDiagram({ diagram: cloned });
-            navigate(`/diagrams/${cloned.id}`);
+            openInNewTab(`/diagrams/${cloned.id}`);
+            setIsCloning(false);
         } catch {
             setIsCloning(false);
         }
-    }, [addDiagram, deleteDiagram, navigate]);
+    }, [addDiagram, deleteDiagram]);
 
     const pageTitle = useMemo(
         () =>

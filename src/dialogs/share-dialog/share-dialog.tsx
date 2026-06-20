@@ -21,14 +21,10 @@ import {
     TabsTrigger,
 } from '@/components/tabs/tabs';
 import { Input } from '@/components/input/input';
-import { Textarea } from '@/components/textarea/textarea';
 import { Label } from '@/components/label/label';
 import { buildEmbedURL, buildShareURL } from '@/lib/share/share-utils';
 
 export interface ShareDialogProps extends BaseDialogProps {}
-
-const DEFAULT_EMBED_WIDTH = 800;
-const DEFAULT_EMBED_HEIGHT = 600;
 
 export const ShareDialog: React.FC<ShareDialogProps> = ({ dialog }) => {
     const { t } = useTranslation();
@@ -36,8 +32,6 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({ dialog }) => {
     const { closeShareDialog } = useDialog();
     const { toast } = useToast();
     const [isCopied, setIsCopied] = useState(false);
-    const [embedWidth, setEmbedWidth] = useState(DEFAULT_EMBED_WIDTH);
-    const [embedHeight, setEmbedHeight] = useState(DEFAULT_EMBED_HEIGHT);
 
     const shareURL = useMemo(
         () => (currentDiagram ? buildShareURL(currentDiagram) : ''),
@@ -49,15 +43,9 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({ dialog }) => {
         [currentDiagram]
     );
 
-    const embedCode = useMemo(() => {
-        return `<iframe src="${embedURL}" width="${embedWidth}" height="${embedHeight}" frameborder="0" title="ChartDB diagram"></iframe>`;
-    }, [embedURL, embedWidth, embedHeight]);
-
     useEffect(() => {
         if (!dialog.open) return;
         setIsCopied(false);
-        setEmbedWidth(DEFAULT_EMBED_WIDTH);
-        setEmbedHeight(DEFAULT_EMBED_HEIGHT);
     }, [dialog.open]);
 
     useEffect(() => {
@@ -159,54 +147,18 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({ dialog }) => {
                         </div>
                     </TabsContent>
                     <TabsContent value="embed" className="grid gap-4 py-2">
-                        <div className="grid w-full grid-cols-2 items-center gap-4">
-                            <div className="grid gap-2">
-                                <Label htmlFor="embed-width">
-                                    {t('share_dialog.embed_width')}
-                                </Label>
-                                <Input
-                                    id="embed-width"
-                                    type="number"
-                                    min={1}
-                                    value={embedWidth}
-                                    onChange={(e) =>
-                                        setEmbedWidth(
-                                            Number(e.target.value) ||
-                                                DEFAULT_EMBED_WIDTH
-                                        )
-                                    }
-                                />
-                            </div>
-                            <div className="grid gap-2">
-                                <Label htmlFor="embed-height">
-                                    {t('share_dialog.embed_height')}
-                                </Label>
-                                <Input
-                                    id="embed-height"
-                                    type="number"
-                                    min={1}
-                                    value={embedHeight}
-                                    onChange={(e) =>
-                                        setEmbedHeight(
-                                            Number(e.target.value) ||
-                                                DEFAULT_EMBED_HEIGHT
-                                        )
-                                    }
-                                />
-                            </div>
-                        </div>
                         <div className="grid w-full items-center gap-2">
-                            <Label htmlFor="embed-code">
-                                {t('share_dialog.embed_code_label')}
+                            <Label htmlFor="embed-url">
+                                {t('share_dialog.embed_url_label')}
                             </Label>
-                            <Textarea
-                                id="embed-code"
-                                readOnly
-                                value={embedCode}
-                                className="min-h-[120px] font-mono text-xs"
-                            />
-                            <div className="flex justify-end">
-                                <CopyButton text={embedCode} />
+                            <div className="flex items-center gap-2">
+                                <Input
+                                    id="embed-url"
+                                    readOnly
+                                    value={embedURL}
+                                    className="font-mono text-xs"
+                                />
+                                <CopyButton text={embedURL} />
                             </div>
                         </div>
                     </TabsContent>
