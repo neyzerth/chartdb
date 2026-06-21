@@ -128,13 +128,14 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({ dialog }) => {
                                 : t('share_dialog.share_link_label')}
                         </Label>
                         <Toggle
+                            id="embed-toggle"
                             pressed={isEmbed}
                             onPressedChange={setIsEmbed}
                             size="sm"
                             variant="outline"
-                            aria-label={t('share_dialog.embed_toggle')}
+                            aria-label={t('share_dialog.embed_label')}
                         >
-                            {t('share_dialog.embed_toggle')}
+                            {t('share_dialog.embed_label')}
                         </Toggle>
                     </div>
                     <div className="flex items-center gap-2">
